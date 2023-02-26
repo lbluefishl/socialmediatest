@@ -1,4 +1,4 @@
-const videos = document.querySelectorAll('[id^="v"]');
+/* const videos = document.querySelectorAll('[id^="v"]');
 
 // Create an IntersectionObserver for each video element
 videos.forEach(video => {
