@@ -14,7 +14,7 @@ videos.forEach(video => {
         if (!video.paused && entry.intersectionRatio < 1) {
           video.load(); // Reload the video
           video.pause(); // Pause the video
-    
+
         } else {
           video.pause(); // Pause the video
         }
@@ -33,8 +33,16 @@ videos.forEach(video => {
 });
 
 
-
-
 setTimeout(function(){
   window.location = "survey.html";
-}, 20000);
+}, 100000);
+
+const loadButton = document.getElementById('loadbutton');
+
+loadButton.addEventListener('click', () => {
+  const videos = document.querySelectorAll(".video-container");
+  console.log('1')
+  for (let i = 0; i < videos.length; i++) {
+    videos[i].style.display = "";
+  }
+});

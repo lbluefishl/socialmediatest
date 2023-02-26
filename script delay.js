@@ -6,7 +6,11 @@ videos.forEach(video => {
     entries.forEach(entry => {
       // If the video is intersecting the viewport
       if (entry.isIntersecting) {
-        video.play(); // Play the video
+
+        setTimeout(function() {
+          video.play();
+        }, 1000);
+        // Play the video
         
       } else {
         // If the video is not intersecting the viewport and is not paused
@@ -14,7 +18,7 @@ videos.forEach(video => {
         if (!video.paused && entry.intersectionRatio < 1) {
           video.load(); // Reload the video
           video.pause(); // Pause the video
-    
+      
         } else {
           video.pause(); // Pause the video
         }
@@ -33,8 +37,6 @@ videos.forEach(video => {
 });
 
 
-
-
 setTimeout(function(){
   window.location = "survey.html";
-}, 20000);
+}, 100000);
