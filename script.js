@@ -9,9 +9,11 @@ videos.forEach(video => {
         video.play(); // Play the video
       } else {
         // If the video is not intersecting the viewport and is not paused
-        if (!video.paused && entry.intersectionRatio === 0) {
+        
+        if (!video.paused && entry.intersectionRatio < 1) {
           video.load(); // Reload the video
           video.pause(); // Pause the video
+          console.log('1')
         } else {
           video.pause(); // Pause the video
         }
