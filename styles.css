@@ -28,11 +28,19 @@ video {
   object-fit: contain;
 }
 
+
+
 p.survey {
   font-size: 3em;
 }
 
+iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  scroll-snap-align: center;
 
+}
 
 button {
   display: block;
@@ -44,4 +52,9 @@ button {
   color: white;
   border: none;
   border-radius: 5px;
+}
+
+
+.embed-video {
+  pointer-events: none;
 }

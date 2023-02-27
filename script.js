@@ -37,4 +37,4 @@ videos.forEach(video => {
 
 setTimeout(function(){
   window.location = "survey.html";
-}, 20000);
+}, 100000);
