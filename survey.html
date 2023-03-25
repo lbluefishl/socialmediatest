@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="survey.css">
 
 </head>
 
@@ -13,14 +13,63 @@
 
 
 <body>
-    <p class="survey">Time is up - please answer the following questions:</p>
-    <p class="survey">  The following questions are based on the time you spent from the START to the END point. </p>
+ 
+
 
   
-    <p class="survey">How long did you think you were browsing from the START point to the END point?</p>
+    <form>
+       <h1>Please answer the following questions:</h1>
+        <label for="participant-id">Participant ID (6-digit code on your card):</label>
+		<input type="text" id="participant-id" name="participant-id">
+        <br>
+		<label for="browse-time">How many minutes do you think you were browsing from the start of the first video to the end of the last video?</label>
+		<select id="browse-time" name="browse-time">
 
-    <p class="survey">How many times did your mind wander?</p>
+			<option value="1">1 minute</option>
+			<option value="2">2 minutes</option>
+			<option value="3">3 minutes</option>
+			<option value="4">4 minutes</option>
+			<option value="5">5 minutes</option>
+		</select>
+        <br>
+		<label for="mind-wandering">How many times did your mind wander during the session?</label>
+		<fieldset id="mind-wandering">
+			<input type="radio" id="never" name="mind-wandering" value="1">
+			<label for="never">Never</label>
+			<input type="radio" id="rarely" name="mind-wandering" value="2">
+			<label for="rarely">Rarely</label>
+			<input type="radio" id="sometimes" name="mind-wandering" value="3">
+			<label for="sometimes">Sometimes</label>
+			<input type="radio" id="often" name="mind-wandering" value="4">
+			<label for="often">Often</label>
+			<input type="radio" id="always" name="mind-wandering" value="5">
+			<label for="always">Always</label>
+		</fieldset>
 
-    <p class="survey">How enjoyable was the experience?</p>
+		<label for="enjoyment">How enjoyable was the experience?</label>
+		<fieldset id="enjoyment">
+			<input type="radio" id="not-enjoyable" name="enjoyment" value="1">
+			<label for="not-enjoyable">Not enjoyable at all</label>
+			<input type="radio" id="slightly-enjoyable" name="enjoyment" value="2">
+			<label for="slightly-enjoyable">Slightly enjoyable</label>
+			<input type="radio" id="moderately-enjoyable" name="enjoyment" value="3">
+			<label for="moderately-enjoyable">Moderately enjoyable</label>
+			<input type="radio" id="very-enjoyable" name="enjoyment" value="4">
+			<label for="very-enjoyable">Very enjoyable</label>
+			<input type="radio" id="extremely-enjoyable" name="enjoyment" value="5">
+			<label for="extremely-enjoyable">Extremely enjoyable</label>
+		</fieldset>
+
+		<button type="submit" id="b1">Submit</button>
+        <script>
+            const b1 =  document.getElementById('b1')
+             b1.addEventListener('click', function() {
+                event.preventDefault();
+                 window.location = 'end.html'
+             }) 
+
+
+           </script>
+	</form>
 </body>
 </html>

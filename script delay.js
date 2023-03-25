@@ -9,7 +9,7 @@ videos.forEach(video => {
 
         setTimeout(function() {
           video.play();
-        }, 1000);
+        }, 2000);
         // Play the video
         
       } else {
@@ -39,4 +39,4 @@ videos.forEach(video => {
 
 setTimeout(function(){
   window.location = "survey.html";
-}, 100000);
+}, 180000);
